@@ -92,7 +92,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           pdfGenerator: () =>
                               generateInvoice(PdfPageFormat.a4))));
                 },
-                child: const Text("To invoice"))
+                child: const Text("To invoice")),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 4),
+            ),
+            ElevatedButton(
+                onPressed: () => PaintingBinding.instance?.imageCache?.clear(),
+                child: const Text("Clear Image Cache"))
           ],
         ),
       ),
